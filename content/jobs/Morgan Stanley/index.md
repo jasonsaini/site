@@ -1,7 +1,7 @@
 ---
-date: '2023-08-01'
+date: '1'
 title: 'Enterprise Engineering Intern'
-company: 'Morgan Stanley
+company: 'Morgan Stanley'
 location: 'Alpharetta, GA'
 range: 'June 2023 - August 2023'
 url: 'https://www.morganstanley.com'
