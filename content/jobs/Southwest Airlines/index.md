@@ -3,7 +3,7 @@ date: '2023-01-05'
 title: 'Product Management Intern'
 company: 'Southwest Airlines'
 location: 'Dallas, TX'
-range: 'January 2023 - May 2023'
+range: 'August 2022 - Dec 2022'
 url: 'https://www.southwest.com/'
 ---
 
