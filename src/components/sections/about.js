@@ -145,19 +145,11 @@ const About = () => {
               <a href="https://www.optum.com/"> a health services innovation company</a>,{' '}
               <a href="https://www.southwest.com/">my favorite airline</a>,{' '}
               <a href="https://www.morganstanley.com/">a leading global investment bank</a>, and{' '}
-              <a href="https://www.sw.siemens.com/en-US/">a global technology powerhouse</a>! My
-              main focus these days is building accessible, inclusive products and digital
-              experiences at <a href="https://upstatement.com/">Upstatement</a> for a variety of
+              <a href="https://www.sw.siemens.com/en-US/">a global technology powerhouse</a>! 
               clients.
             </p>
 
             <p>
-              I also recently{' '}
-              <a href="https://www.newline.co/courses/build-a-spotify-connected-app">
-                launched a course
-              </a>{' '}
-              that covers everything you need to build a web app with the Spotify API using Node
-              &amp; React.
             </p>
 
             <p>Here are a few technologies I’ve been working with recently:</p>
