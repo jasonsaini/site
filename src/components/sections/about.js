@@ -145,7 +145,6 @@ const About = () => {
               <a href="https://www.southwest.com/">my favorite airline</a>,{' '}
               <a href="https://www.morganstanley.com/">a leading global investment bank</a>, and{' '}
               <a href="https://www.sw.siemens.com/en-US/">a global technology powerhouse</a>! 
-              clients.
             </p>
 
             <p>
