@@ -1,9 +1,9 @@
 ---
-date: '2022-10-01'
-title: 'Supplemental Instruction Leader'
-company: 'University of Central Florida'
-location: 'Orlando, FL'
-range: 'January 2022 - June 2022'
+date: '2023-08-01'
+title: 'Enterprise Engineering Intern'
+company: 'Morgan Stanley
+location: 'Alpharetta, GA'
+range: 'June 2023 - August 2023'
 url: 'https://www.morganstanley.com'
 ---
 

@@ -3,7 +3,7 @@ date: '2022-01-01'
 title: 'Supplemental Instruction Leader'
 company: 'University of Central Florida'
 location: 'Orlando, FL'
-range: 'January 2023 - May 2023'
+range: 'January 2022 - May 2022'
 url: 'https://www.southwest.com/'
 ---
 
