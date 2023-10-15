@@ -65,7 +65,7 @@ const Hero = () => {
   const four = (
     <>
       <p>
-      I have over 2 years of experiences working at places like Morgan Stanley, Siemens, Southwest Airlines, and Optum, specializing in cloud computing, data science, and software engineering. I love taking on complex challenges and turning ideas into reality. Always learning and growing, I aim to use my knowledge to make a meaningful impact.
+      I have over 2 years of experiences working at places like Morgan Stanley, Siemens, Southwest Airlines, and Optum, specializing in cloud computing, data science, and software engineering. I love taking on complex challenges and turning ideas into reality.
       </p>
     </>
   );

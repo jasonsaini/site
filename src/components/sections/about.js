@@ -136,8 +136,7 @@ const About = () => {
           <div>
             <p>
               Hi! My name is Jason and I enjoy making tech work for myself and others. My
-              interest in software dates all the way back to 2015, where I made a Rubik's cube solving robot in the 
-              eigth grade. I learned how to implement complex algorithms through code, and now I get to do that for a living!
+              interest in software dates all the way back to 2015, where I made a Rubik's cube solving robot when I was 13. 
             </p>
 
             <p>
