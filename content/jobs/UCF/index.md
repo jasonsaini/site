@@ -1,12 +1,12 @@
 ---
-date: '2023-04-05'
-title: 'Product Management Intern'
-company: 'Southwest Airlines'
-location: 'Dallas, TX'
+date: '2022-01-01'
+title: 'Supplemental Instruction Leader'
+company: 'University of Central Florida'
+location: 'Orlando, FL'
 range: 'January 2023 - May 2023'
 url: 'https://www.southwest.com/'
 ---
 
-- Enterprise Reporting: Coordinated w/ senior analysts to report enterprise-level Scaled Agile development using Alteryx & Tableau
-- Data Engineering: Reduced data processing workflow execution time by 75% via query optimization in Alteryx
-- Requirements Gathering: Met with executive leadership to collect data analysis and reporting needs surrounding enterprise portfolio management (SAFe)
+- Reinforced student understanding of computer theory(data structures & algorithms, space/time complexity, memory) 
+- Conducted SI Sessions that guide students through course materials and programming concepts in C.
+- Maintained attendance records & update WordPress website with current session times and reference materials
