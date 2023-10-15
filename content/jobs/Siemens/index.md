@@ -1,6 +1,6 @@
 ---
 date: '4'
-title: 'Software Development Intern'
+title: '5oftware Development Intern'
 company: 'Siemens Digital Industries Sofware'
 location: 'Remote'
 range: 'January 2023 - Current'
