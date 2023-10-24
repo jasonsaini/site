@@ -182,25 +182,6 @@ const Nav = ({ isHome }) => {
 
   // const Logo = (
   //   <div className="logo" tabIndex="-1">
-  //     {isHome ? (
-  //       <a href="/" aria-label="home">
-  //         <div className="hex-container">
-  //           <IconHex />
-  //         </div>
-  //         <div className="logo-container">
-  //           <IconLogo />
-  //         </div>
-  //       </a>
-  //     ) : (
-  //       <Link to="/" aria-label="home">
-  //         <div className="hex-container">
-  //           <IconHex />
-  //         </div>
-  //         <div className="logo-container">
-  //           <IconLogo />
-  //         </div>
-  //       </Link>
-  //     )}
   //   </div>
   // );
 
@@ -215,6 +196,8 @@ const Nav = ({ isHome }) => {
       <StyledNav>
         {prefersReducedMotion ? (
           <>
+            {}
+
             <StyledLinks>
               <ol>
                 {navLinks &&
@@ -234,7 +217,7 @@ const Nav = ({ isHome }) => {
             <TransitionGroup component={null}>
               {isMounted && (
                 <CSSTransition classNames={fadeClass} timeout={timeout}>
-                  <></>
+                  <>{}</>
                 </CSSTransition>
               )}
             </TransitionGroup>
