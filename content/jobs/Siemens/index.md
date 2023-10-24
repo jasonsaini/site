@@ -1,5 +1,5 @@
 ---
-date: 2
+date: 'First'
 title: 'Software Development Intern'
 company: 'Siemens Digital Industries Sofware'
 location: 'Remote'

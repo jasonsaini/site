@@ -1,5 +1,5 @@
 ---
-date: ''
+date: 'Second'
 title: 'Enterprise Engineering Intern'
 company: 'Morgan Stanley'
 location: 'Alpharetta, GA'
