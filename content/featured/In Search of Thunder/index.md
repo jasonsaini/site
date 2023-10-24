@@ -4,11 +4,13 @@ title: 'In Search of Thunder'
 cover: './demo.png'
 tech:
   - Unity
-  - 'C#'
+  - C#
+  - Git & GitHub
   - Perforce
   - Finite State Machines
 ---
 
-Having struggled with understanding how the Spotify OAuth flow works, I made the course I wish I could have had.
+A 3D isometric action-adventure game inspired by Hades!
 
-Unlike tutorials that only cover a few concepts and leave you with half-baked GitHub repositories, this course covers everything from explaining the principles of REST APIs to implementing Spotify's OAuth flow and fetching API data in a React app. By the end of the course, you’ll have an app deployed to the internet you can add to your portfolio.
+Led collaborative creative efforts towards user-experience, game design, story,premise, technical tradeoffs, AI programming.
+Created scripts in C# to model desired agents via traditional AI techniques (collision detection, navigation, finite state machines)
