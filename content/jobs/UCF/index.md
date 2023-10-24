@@ -1,5 +1,5 @@
 ---
-date: '12'
+date: '2014-12-21'
 title: 'Supplemental Instruction Leader'
 company: 'University of Central Florida'
 location: 'Orlando, FL'
