@@ -1,5 +1,5 @@
 ---
-date: 'Third'
+date: '2'
 title: 'Product Management Intern'
 company: 'Southwest Airlines'
 location: 'Dallas, TX'
