@@ -1,5 +1,5 @@
 ---
-date: 'B'
+date: '2022-08-21'
 title: 'Backend Developer Intern'
 company: 'Optum'
 location: 'Remote'

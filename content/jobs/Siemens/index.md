@@ -1,5 +1,5 @@
 ---
-date: 'C'
+date: '2023-12-21'
 title: 'Software Development Intern'
 company: 'Siemens Digital Industries Sofware'
 location: 'Remote'

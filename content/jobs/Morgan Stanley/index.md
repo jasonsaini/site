@@ -1,5 +1,5 @@
 ---
-date: '5'
+date: '2023-08-21'
 title: 'Enterprise Engineering Intern'
 company: 'Morgan Stanley'
 location: 'Alpharetta, GA'
