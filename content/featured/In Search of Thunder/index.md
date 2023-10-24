@@ -3,10 +3,10 @@ date: '3'
 title: 'In Search of Thunder'
 cover: './demo.png'
 tech:
-  - React
-  - Express
-  - Spotify API
-  - Styled Components
+  - Unity
+  - 'C#'
+  - Perforce
+  - Finite State Machines
 ---
 
 Having struggled with understanding how the Spotify OAuth flow works, I made the course I wish I could have had.
