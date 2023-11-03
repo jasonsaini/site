@@ -10,12 +10,12 @@ import {
   IconGitHub,
   IconInstagram,
   IconLinkedin,
+  IconLoader,
   IconLogo,
   IconPlayStore,
   IconStar,
   IconTwitter,
 } from '@components/icons';
-
 const Icon = ({ name }) => {
   switch (name) {
     case 'AppStore':
@@ -37,7 +37,7 @@ const Icon = ({ name }) => {
     case 'Linkedin':
       return <IconLinkedin />;
     case 'Loader':
-      return <IconLogo />;
+      return <IconLoader />;
     case 'Logo':
       return <IconLogo />;
     case 'PlayStore':
