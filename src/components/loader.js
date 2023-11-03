@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import anime from 'animejs';
 import styled from 'styled-components';
-import { IconLoader } from '@components/icons';
 
 const StyledLoader = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -37,7 +35,7 @@ const StyledLoader = styled.div`
 `;
 
 const Loader = ({ finishLoading }) => {
-  const [isMounted, setIsMounted] = useState(false);
+  const [setIsMounted] = useState(false);
 
   const animate = () => {
     const loader = anime.timeline({
@@ -81,15 +79,7 @@ const Loader = ({ finishLoading }) => {
     return () => clearTimeout(timeout);
   }, []);
 
-  return (
-    <StyledLoader className="loader" isMounted={isMounted}>
-      <Helmet bodyAttributes={{ class: `hidden` }} />
-
-      <div className="logo-wrapper">
-        <IconLoader />
-      </div>
-    </StyledLoader>
-  );
+  return <StyledLoader className=""></StyledLoader>;
 };
 
 Loader.propTypes = {
