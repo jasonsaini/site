@@ -1,7 +1,7 @@
 import React from 'react';
 
 const IconLogo = () => (
-  <svg>
+  <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
     <rect x="19" y="19" width="20" height="20" fill="#495670">
       <animate
         attributeName="fill"
