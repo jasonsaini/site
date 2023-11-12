@@ -5,15 +5,86 @@ const IconLoader = () => (
     <title>Loader Logo</title>
     <g>
       <g id="B" transform="translate(11.000000, 5.000000)">
-        <path d="M10 50A40 40 0 0 0 90 50A40 42 0 0 1 10 50" fill="#e15b64" stroke="none">
-          <animateTransform
-            attributeName="transform"
-            type="rotate"
+        <rect x="19" y="19" width="20" height="20" fill="#495670">
+          <animate
+            attributeName="fill"
+            values="#df1f2d;#495670;#495670"
+            keyTimes="0;0.125;1"
             dur="1s"
             repeatCount="indefinite"
-            keyTimes="0;1"
-            values="0 50 51;360 50 51"></animateTransform>
-        </path>
+            begin="0s"
+            calcMode="discrete"></animate>
+        </rect>
+        <rect x="40" y="19" width="20" height="20" fill="#495670">
+          <animate
+            attributeName="fill"
+            values="#df1f2d;#495670;#495670"
+            keyTimes="0;0.125;1"
+            dur="1s"
+            repeatCount="indefinite"
+            begin="0.125s"
+            calcMode="discrete"></animate>
+        </rect>
+        <rect x="61" y="19" width="20" height="20" fill="#495670">
+          <animate
+            attributeName="fill"
+            values="#df1f2d;#495670;#495670"
+            keyTimes="0;0.125;1"
+            dur="1s"
+            repeatCount="indefinite"
+            begin="0.25s"
+            calcMode="discrete"></animate>
+        </rect>
+        <rect x="19" y="40" width="20" height="20" fill="#495670">
+          <animate
+            attributeName="fill"
+            values="#df1f2d;#495670;#495670"
+            keyTimes="0;0.125;1"
+            dur="1s"
+            repeatCount="indefinite"
+            begin="0.875s"
+            calcMode="discrete"></animate>
+        </rect>
+        <rect x="61" y="40" width="20" height="20" fill="#495670">
+          <animate
+            attributeName="fill"
+            values="#df1f2d;#495670;#495670"
+            keyTimes="0;0.125;1"
+            dur="1s"
+            repeatCount="indefinite"
+            begin="0.375s"
+            calcMode="discrete"></animate>
+        </rect>
+        <rect x="19" y="61" width="20" height="20" fill="#495670">
+          <animate
+            attributeName="fill"
+            values="#df1f2d;#495670;#495670"
+            keyTimes="0;0.125;1"
+            dur="1s"
+            repeatCount="indefinite"
+            begin="0.75s"
+            calcMode="discrete"></animate>
+        </rect>
+        <rect x="40" y="61" width="20" height="20" fill="#495670">
+          <animate
+            attributeName="fill"
+            values="#df1f2d;#495670;#495670"
+            keyTimes="0;0.125;1"
+            dur="1s"
+            repeatCount="indefinite"
+            begin="0.625s"
+            calcMode="discrete"></animate>
+        </rect>
+        <rect x="61" y="61" width="20" height="20" fill="#495670">
+          <animate
+            attributeName="fill"
+            values="#df1f2d;#495670;#495670"
+            keyTimes="0;0.125;1"
+            dur="1s"
+            repeatCount="indefinite"
+            begin="0.5s"
+            calcMode="discrete"></animate>
+        </rect>
       </g>
     </g>
   </svg>
