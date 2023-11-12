@@ -74,7 +74,7 @@ const Loader = ({ finishLoading }) => {
   };
 
   useEffect(() => {
-    const timeout = setTimeout(() => setIsMounted(true), 10);
+    const timeout = setTimeout(() => setIsMounted(true), 2);
     animate();
     return () => clearTimeout(timeout);
   }, []);
