@@ -77,9 +77,6 @@ const StyledNav = styled.nav`
         top: 0;
         left: 0;
         z-index: -1;
-        @media (prefers-reduced-motion: no-preference) {
-          transition: var(--transition);
-        }
       }
 
       .logo-container {
