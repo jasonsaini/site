@@ -28,10 +28,6 @@ const Layout = ({ children, location }) => {
   };
 
   useEffect(() => {
-    if (isLoading) {
-      return;
-    }
-
     if (location.hash) {
       const id = location.hash.substring(1); // location.hash without the '#'
       setTimeout(() => {
