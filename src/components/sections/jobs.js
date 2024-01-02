@@ -188,7 +188,7 @@ const Jobs = () => {
   `);
 
   const jobsData = data.jobs.edges;
-  console.log("sorted = " + data.jobs.edges)
+  console.log("sorted = " , data.jobs.edges)
   const [activeTabId, setActiveTabId] = useState(0);
   const [tabFocus, setTabFocus] = useState(null);
   const tabs = useRef([]);
