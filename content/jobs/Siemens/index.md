@@ -3,7 +3,7 @@ date: '2017-01-21'
 title: 'Software Development Intern'
 company: 'Siemens Digital Industries Sofware'
 location: 'Remote'
-range: 'January 2023 - Current'
+range: 'January 2023 - December 2023'
 url: 'https://www.sw.siemens.com/en-US/'
 ---
 
