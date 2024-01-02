@@ -7,7 +7,8 @@ range: 'June 2023 - August 2023'
 url: 'https://www.morganstanley.com'
 ---
 
-- Cloud Technologies: Supported & developed cloud-based software compliant with firm-wide cyber-security standards
-- Firewall Auditor Project: Independently developed firewall auditor in Python for internally provisioned Databricks engineering environments, reducing validation time by 50%
-- Open-AI Code Generation: Leveraged OpenAI API to create CLI that generates code based on user-specified functionality & internal documentation
-- Development Environments: Operated in cross-platform development environment using IDEs on Windows & using Linux (SSH) runtime environments
+- Cloud Technologies: Internally deployed Azure-based applications & solutions to over 20,000 engineers & analysts
+- Firewall Auditor Project: Independently developed firewall auditor in Python for internally provisioned Databricks
+engineering environments, reducing validation time by 50%
+- Open-AI: Developed a CLI using OpenAI API that automates code generation from user inputs, increasing code
+throughput by 20%, w/ features for parsing & integrating internal documentation

@@ -7,6 +7,5 @@ range: 'January 2022 - May 2022'
 url: 'https://www.southwest.com/'
 ---
 
-- Reinforced student understanding of computer theory (data structures & algorithms, space/time complexity, memory)
-- Conducted SI Sessions that guide students through course materials and programming concepts in C.
-- Maintained attendance records & update WordPress website with current session times and reference materials
+- Impact: Reinforced student understanding of CompSci theory (data structures, algorithms, space/time complexity)
+- Supplemental Instruction: Delivered SI Sessions to over 100 students via live programming demos in C
