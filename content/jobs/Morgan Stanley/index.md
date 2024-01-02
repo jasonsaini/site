@@ -8,7 +8,5 @@ url: 'https://www.morganstanley.com'
 ---
 
 - Cloud Technologies: Internally deployed Azure-based applications & solutions to over 20,000 engineers & analysts
-- Firewall Auditor Project: Independently developed firewall auditor in Python for internally provisioned Databricks
-engineering environments, reducing validation time by 50%
-- Open-AI: Developed a CLI using OpenAI API that automates code generation from user inputs, increasing code
-throughput by 20%, w/ features for parsing & integrating internal documentation
+- Firewall Auditor Project: Independently developed firewall auditor in Python for internally provisioned Databricks engineering environments, reducing validation time by 50%
+- Open-AI: Developed a CLI using OpenAI API that automates code generation from user inputs, increasing code throughput by 20%, w/ features for parsing & integrating internal documentation
