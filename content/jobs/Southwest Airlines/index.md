@@ -1,5 +1,5 @@
 ---
-date: '2016-12-21'
+date: '2022-12-12'
 title: 'Product Management Intern'
 company: 'Southwest Airlines'
 location: 'Dallas, TX'
