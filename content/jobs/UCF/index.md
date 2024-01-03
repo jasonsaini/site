@@ -1,7 +1,7 @@
 ---
 date: '2014-12-21'
 title: 'Supplemental Instruction Leader'
-company: 'University of Central Florida'
+company: 'UCF'
 location: 'Orlando, FL'
 range: 'January 2022 - May 2022'
 url: 'https://www.southwest.com/'
