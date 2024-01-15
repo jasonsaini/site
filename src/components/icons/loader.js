@@ -1,91 +1,26 @@
 import React from 'react';
 
 const IconLoader = () => (
-  <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" height="200px">
+  <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
     <title>Loader Logo</title>
     <g>
-      <g id="path" transform="translate(11.000000, 5.000000)">
-        <rect x="19" y="19" width="20" height="20" fill="#495670">
-          <animate
-            attributeName="fill"
-            values="#df1f2d;#495670;#495670"
-            keyTimes="0;0.125;1"
-            dur="1s"
-            repeatCount="indefinite"
-            begin="0s"
-            calcMode="discrete"></animate>
-        </rect>
-        <rect x="40" y="19" width="20" height="20" fill="#495670">
-          <animate
-            attributeName="fill"
-            values="#df1f2d;#495670;#495670"
-            keyTimes="0;0.125;1"
-            dur="1s"
-            repeatCount="indefinite"
-            begin="0.125s"
-            calcMode="discrete"></animate>
-        </rect>
-        <rect x="61" y="19" width="20" height="20" fill="#495670">
-          <animate
-            attributeName="fill"
-            values="#df1f2d;#495670;#495670"
-            keyTimes="0;0.125;1"
-            dur="1s"
-            repeatCount="indefinite"
-            begin="0.25s"
-            calcMode="discrete"></animate>
-        </rect>
-        <rect x="19" y="40" width="20" height="20" fill="#495670">
-          <animate
-            attributeName="fill"
-            values="#df1f2d;#495670;#495670"
-            keyTimes="0;0.125;1"
-            dur="1s"
-            repeatCount="indefinite"
-            begin="0.875s"
-            calcMode="discrete"></animate>
-        </rect>
-        <rect x="61" y="40" width="20" height="20" fill="#495670">
-          <animate
-            attributeName="fill"
-            values="#df1f2d;#495670;#495670"
-            keyTimes="0;0.125;1"
-            dur="1s"
-            repeatCount="indefinite"
-            begin="0.375s"
-            calcMode="discrete"></animate>
-        </rect>
-        <rect x="19" y="61" width="20" height="20" fill="#495670">
-          <animate
-            attributeName="fill"
-            values="#df1f2d;#495670;#495670"
-            keyTimes="0;0.125;1"
-            dur="1s"
-            repeatCount="indefinite"
-            begin="0.75s"
-            calcMode="discrete"></animate>
-        </rect>
-        <rect x="40" y="61" width="20" height="20" fill="#495670">
-          <animate
-            attributeName="fill"
-            values="#df1f2d;#495670;#495670"
-            keyTimes="0;0.125;1"
-            dur="1s"
-            repeatCount="indefinite"
-            begin="0.625s"
-            calcMode="discrete"></animate>
-        </rect>
-        <rect x="61" y="61" width="20" height="20" fill="#495670">
-          <animate
-            attributeName="fill"
-            values="#df1f2d;#495670;#495670"
-            keyTimes="0;0.125;1"
-            dur="1s"
-            repeatCount="indefinite"
-            begin="0.5s"
-            calcMode="discrete"></animate>
-        </rect>
+      <g id="B">
+        <text x="33.7" y="70" fill="currentColor" fontSize="55px" fontFamily="Consolas, serif">
+          J
+        </text>
       </g>
+      <path
+        stroke="currentColor"
+        strokeWidth="5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M 50, 5
+                  L 11, 27
+                  L 11, 72
+                  L 50, 95
+                  L 89, 73
+                  L 89, 28 z"
+      />
     </g>
   </svg>
 );
