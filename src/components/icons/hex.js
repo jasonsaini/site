@@ -3,7 +3,8 @@ import React from 'react';
 const IconHex = () => (
 
 
-<svg width="2335px" height="2441.8px" enableBackground="new 0 0 2335 2441.8" viewBox="0 0 2335 2441.8" xmlns="http://www.w3.org/2000/svg" >
+<svg width="2335px" height="2441.8px" fillRule="evenodd"
+    clipRule="evenodd" enableBackground="new 0 0 2335 2441.8" viewBox="0 0 2335 2441.8" xmlns="http://www.w3.org/2000/svg" >
 
 <g transform="translate(0.000000,800.000000) scale(0.100000,-0.100000)"
 fill="#000000" stroke="#000" strokeMiterlimit="10">
