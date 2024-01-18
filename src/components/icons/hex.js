@@ -6,7 +6,7 @@ const IconHex = () => (
 <svg width="2335px" height="2441.8px" enableBackground="new 0 0 2335 2441.8" viewBox="0 0 2335 2441.8" xmlns="http://www.w3.org/2000/svg" >
 
 <g transform="translate(0.000000,800.000000) scale(0.100000,-0.100000)"
-fill="#000000" stroke="none">
+fill="#000000" stroke="#000" strokeMiterlimit="10">
 <path d="M3715 7678 c-16 -6 -111 -57 -211 -114 -100 -56 -217 -122 -260 -146
 -43 -25 -209 -118 -369 -207 -159 -90 -346 -195 -415 -233 -69 -39 -154 -87
 -190 -108 -36 -21 -137 -78 -225 -128 -181 -101 -572 -323 -870 -492 -243
