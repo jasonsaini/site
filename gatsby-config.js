@@ -5,7 +5,7 @@ module.exports = {
     title: 'Jason Saini',
     description:
       'Jason Saini is a tech innovator with expertise in cloud computing, data science, and software engineering, dedicated to making a meaningful impact.',
-    siteUrl: 'hhttps://jason-saini.com/', // No trailing slash allowed!
+    siteUrl: 'https://jason-saini.com/', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '',
   },
