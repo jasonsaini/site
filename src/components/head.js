@@ -43,14 +43,14 @@ const Head = ({ title, description, image }) => {
     keywords:keywords
   };
 
-  console.log(seo.keywords)
+
   return (
     <Helmet title={title} defaultTitle={seo.title} titleTemplate={`%s | ${defaultTitle}`}>
       <html lang="en" />
 
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
-      <meta property="keywords" content= {seo.keywords}/>
+      <meta name="keywords" content= {seo.keywords}/>
       <meta property="og:title" content={seo.title} />
       <meta property="og:description" content={seo.description} />
       <meta property="og:image" content={seo.image} />
