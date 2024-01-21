@@ -42,6 +42,7 @@ const Head = ({ title, description, image }) => {
     url: `${siteUrl}${pathname}`,
   };
 
+  console.log(seo.keywords)
   return (
     <Helmet title={title} defaultTitle={seo.title} titleTemplate={`%s | ${defaultTitle}`}>
       <html lang="en" />
