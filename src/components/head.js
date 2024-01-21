@@ -40,6 +40,7 @@ const Head = ({ title, description, image }) => {
     description: description || defaultDescription,
     image: `${siteUrl}${image || defaultImage}`,
     url: `${siteUrl}${pathname}`,
+    keywords:keywords
   };
 
   console.log(seo.keywords)
