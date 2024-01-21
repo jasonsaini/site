@@ -8,6 +8,7 @@ module.exports = {
     siteUrl: 'https://jason-saini.com/', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '',
+    keywords: 'Jason, jason, Jason Saini, jason saini, jason s'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
