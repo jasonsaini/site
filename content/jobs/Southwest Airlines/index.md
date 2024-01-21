@@ -1,7 +1,7 @@
 ---
 date: '2022-08-08'
 title: 'Product Management Intern'
-company: 'Southwest Airlines'
+company: 'Southwest'
 location: 'Dallas, TX'
 range: 'August 2022 - Dec 2022'
 url: 'https://www.southwest.com/'
