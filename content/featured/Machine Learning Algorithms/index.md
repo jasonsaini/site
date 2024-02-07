@@ -1,5 +1,5 @@
 ---
-date: '1'
+date: '2'
 title: 'Fake News Detector'
 cover: './demo.png'
 github: 'https://github.com/jasonsaini/Learning-Algorithms-for-Machine-Learning/blob/master/5%20-%20Deep%20Learning%2C%20Neural%20Networks%2C%20and%20NLP/NLP-Deep_Learning-Neural_Networks.ipynb'
