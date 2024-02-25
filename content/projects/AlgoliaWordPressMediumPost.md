@@ -1,14 +1,14 @@
 ---
 date: '2020-03-27'
-title: 'Integrating Algolia Search with WordPress Multisite'
+title: 'Exploring AI'
 github: ''
 external: 'https://medium.com/stories-from-upstatement/integrating-algolia-search-with-wordpress-multisite-e2dea3ed449c'
 tech:
-  - Algolia
-  - WordPress
-  - PHP
-company: 'Upstatement'
+  - Python Data SDK
+  - NumPy
+  - PyTorch
+  - JuPyter
 showInProjects: true
 ---
 
-Building a custom multisite compatible WordPress plugin to build global search with Algolia
+ exploration of artificial intelligence, focusing on machine learning & deep learning. It encompasses a range of projects & experiments utilizing Python, NumPy, and PyTorch, showcasing practical applications in computer vision & natural language processing.
