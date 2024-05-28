@@ -1,5 +1,5 @@
 ---
-date: '1'
+date: '2'
 title: 'Visual Studio Clone'
 cover: './demo.png'
 github: 'https://github.com/jasonsaini/VS-Clone'

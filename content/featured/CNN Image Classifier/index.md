@@ -1,5 +1,5 @@
 ---
-date: '0'
+date: '1'
 title: 'CNN Image Classifier'
 cover: './demo.png'
 tech:
