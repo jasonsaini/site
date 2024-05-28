@@ -8,7 +8,7 @@ tech:
   - Git & GitHub
   - Perforce
   - Finite State Machines
-github: 'https://github.com/jasonsaini/InSearchofThunderGame'
+github: 'https://github.com/jasonsaini/ParallelJobMiner'
 ---
 
 A 3D isometric action-adventure game inspired by Hades!
