@@ -2,7 +2,7 @@
 date: '0'
 title: 'Parallel Job Miner'
 cover: './demo.png'
-github: 'https://github.com/jasonsaini/SoundScout'
+github: 'https://github.com/jasonsaini/ParallelJobMiner'
 tech:
   - Python
   - REST APIs
