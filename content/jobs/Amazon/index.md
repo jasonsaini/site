@@ -11,4 +11,5 @@ url: 'https://www.amazon.com'
 - Develop expertise in cloud network architecture and security protocols, ensuring robust protection and optimal performance of AWS infrastructure.
 - Collaborate with AWS engineers and peers in a virtual classroom setting to enhance troubleshooting skills and technical knowledge.
 - Apply advanced cloud skills in real-world customer case simulations, addressing complex technical issues across multiple AWS services.
-- Utilize scripting languages including Perl, Python, and Ruby to automate tasks and streamline cloud operations. 
+- Leveraged Python, boto3, & Cloud9 to automate deployment, monitoring, & maintenance
+  of S3 usage, integrating CloudWatch & CloudTrail APIs to manage access logs, increasing security compliance by 40%.
