@@ -66,7 +66,7 @@ const Hero = () => {
     <>
       <p>
         I have over 2 years of internship experiences working at companies like Amazon, Morgan
-        Stanley, Siemens & Southwest Airlines, specializing in cloud development, data science, and
+        Stanley, Siemens & Southwest Airlines, specializing in cloud development, data science, &
         software engineering. I love taking on complex challenges & turning ideas into reality.
       </p>
     </>
