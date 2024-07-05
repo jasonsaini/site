@@ -64,10 +64,10 @@ const Hero = () => {
   const three = <h3 className="big-heading">Collaborating for a smarter world.</h3>;
   const four = (
     <>
-      <p>
-        I have over 2 years of internship experiences working at places like Morgan Stanley,
-        Siemens, Southwest Airlines, and Optum, specializing in cloud computing, data science, and
-        software engineering. I love taking on complex challenges and turning ideas into reality.
+        I have over 2 years of internship experiences working at companies like Amazon, Morgan
+        Stanley, Siemens and Southwest Airlines, specializing in cloud development, data science,
+        and software engineering. I love taking on complex challenges and turning ideas into
+        reality.
       </p>
     </>
   );
