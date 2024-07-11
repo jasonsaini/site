@@ -135,20 +135,21 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hi! My name is Jason and I enjoy making tech work for myself and others. My
-              interest in software dates all the way back to 2015, where I made a Rubik's cube solving robot when I was 13. 
+              Hi! My name is Jason and I enjoy making tech work for myself and others. My interest
+              in software dates all the way back to 2015, where I made a Rubik's cube solving robot
+              when I was 13.
             </p>
 
             <p>
               Fast-forward to today, and I’ve had the privilege of working at{' '}
+              <a href="https://aws.amazon.com/"> THE leading cloud solutions provider</a>,{' '}
               <a href="https://www.optum.com/"> a health services innovation company</a>,{' '}
               <a href="https://www.southwest.com/">my favorite airline</a>,{' '}
               <a href="https://www.morganstanley.com/">a leading global investment bank</a>, and{' '}
-              <a href="https://www.sw.siemens.com/en-US/">a global technology powerhouse</a>! 
+              <a href="https://www.sw.siemens.com/en-US/">a global technology powerhouse</a>!
             </p>
 
-            <p>
-            </p>
+            <p></p>
 
             <p>Here are a few technologies I’ve been working with recently:</p>
           </div>
