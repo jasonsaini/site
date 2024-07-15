@@ -9,4 +9,4 @@ tech:
 github: 'https://github.com/jasonsaini/Image-Classification-with-CNN'
 ---
 
-This image classifier uses a convolutional neural network (CNN) & deep learning for efficient classification. It effectively distinguishes between "happy" & "sad" images, performing on datasets sourced from Google Images.
+Build an interface with a stock price data feed and visually display data to assist our traders as a Software Engineer at JPMorgan Chase.
