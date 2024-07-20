@@ -1,5 +1,5 @@
 ---
-date: '2022-01-27'
+date: '2022-12-27'
 title: 'Learning ALgorithms for ML'
 github: 'https://github.com/jasonsaini/Learning-Algorithms-for-Machine-Learning'
 external:  'https://github.com/jasonsaini/Learning-Algorithms-for-Machine-Learning'
