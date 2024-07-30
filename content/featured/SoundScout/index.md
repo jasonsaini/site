@@ -1,5 +1,5 @@
 ---
-date: '5'
+date: '6'
 title: 'SoundScout'
 cover: './demo.png'
 github: 'https://github.com/jasonsaini/SoundScout'
