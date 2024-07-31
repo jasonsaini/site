@@ -2,7 +2,8 @@
 date: '4'
 title: 'Typing Test'
 cover: './demo.png'
-github: 'https://github.com/jasonsaini/SoundScout'
+github: 'https://github.com/jasonsaini/Typing-Test'
+external: 'https://jasonsaini.github.io/Typing-Test/src/index.html'
 tech:
   - JavaScript
   - JQuery
