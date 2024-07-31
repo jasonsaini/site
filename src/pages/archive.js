@@ -211,13 +211,13 @@ const ArchivePage = ({ location, data }) => {
                               <Icon name="GitHub" />
                             </a>
                           )}
-                          {ios && (
-                            <a href={ios} aria-label="Apple App Store Link">
+                          {false && (
+                            <a href={false} aria-label="Apple App Store Link">
                               <Icon name="AppStore" />
                             </a>
                           )}
-                          {android && (
-                            <a href={android} aria-label="Google Play Store Link">
+                          {false && (
+                            <a href={false} aria-label="Google Play Store Link">
                               <Icon name="PlayStore" />
                             </a>
                           )}
@@ -254,8 +254,6 @@ export const pageQuery = graphql`
             tech
             github
             external
-            ios
-            android
             company
           }
           html
