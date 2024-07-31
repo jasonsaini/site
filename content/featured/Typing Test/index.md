@@ -1,14 +1,13 @@
 ---
-date: '5'
-title: 'SoundScout'
+date: '4'
+title: 'Typing Test'
 cover: './demo.png'
 github: 'https://github.com/jasonsaini/SoundScout'
 tech:
-  - Python
-  - Spotify API (spotipy)
-  - pandas
+  - JavaScript
+  - JQuery
+  - HTML/CSS
   - REST APIs
-  - Sci-Kit Learn
 ---
 
-Leverage Spotify API to retrieve information about songs from a specific playlist, perform some data processing and feature extraction, and provide recommendations based on similarity and popularity scores
+Find out your typing speed in words per minute (WPM) with my Simple Typing test, pulling randomly generated quotes from a REST API.

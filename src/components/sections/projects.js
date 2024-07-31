@@ -263,8 +263,8 @@ const Projects = () => {
     );
   };
 
-  return 
-    <></>
+  return (
+    <></>)
     /*
     <StyledProjectsSection>
       <h2 ref={revealTitle}>Other Noteworthy Projects</h2>
@@ -308,7 +308,6 @@ const Projects = () => {
     //   </button>
     // </StyledProjectsSection>
     */
-  );
 };
 
 export default Projects;
