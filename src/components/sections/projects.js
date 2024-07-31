@@ -264,7 +264,7 @@ const Projects = () => {
   };
 
   return (
-    <></>)
+    <></>);
     /*
     <StyledProjectsSection>
       <h2 ref={revealTitle}>Other Noteworthy Projects</h2>
