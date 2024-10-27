@@ -1,5 +1,5 @@
 ---
-date: '0'
+date: '1'
 title: 'Parallel Job Miner'
 cover: './demo.png'
 github: 'https://github.com/jasonsaini/ParallelJobMiner'

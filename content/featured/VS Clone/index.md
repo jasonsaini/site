@@ -1,12 +1,11 @@
 ---
-date: '2'
+date: '3'
 title: 'Visual Studio Clone'
 cover: './demo.png'
 github: 'https://github.com/jasonsaini/VS-Clone'
 tech:
   - Python
-  - PyQt5
-  - QScintilla
+  - PyQt5  - QScintilla
   - REST APIs
   - Lexers
 ---
