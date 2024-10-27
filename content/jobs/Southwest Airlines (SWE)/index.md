@@ -1,6 +1,6 @@
 ---
 date: '2026-08-08'
-title: 'Software Engineerng Intern'
+title: 'Software Engineering Intern'
 company: 'Southwest (SWE)'
 location: 'Dallas, TX'
 range: 'January 2024 - May 2024'
