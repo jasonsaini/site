@@ -1,9 +1,9 @@
 ---
 date: '2022-08-08'
-title: 'Product Management Intern'
-company: 'Southwest (PM)'
+title: 'Data Engineering Intern'
+company: 'Southwest (DE)'
 location: 'Dallas, TX'
-range: 'August 2022 - Dec 2022'
+range: 'January 2023 - May 2023'
 url: 'https://www.southwest.com/'
 ---
 
