@@ -1,5 +1,5 @@
 ---
-date: '2027-07-07'
+date: '2026-08-08'
 title: 'Cloud Intern (AWS)'
 company: 'Amazon'
 location: 'Seattle, WA'
