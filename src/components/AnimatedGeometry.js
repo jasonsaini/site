@@ -3,86 +3,55 @@ import styled, { keyframes, createGlobalStyle } from 'styled-components';
 import { usePrefersReducedMotion } from '@hooks';
 
 const GeometryStyles = createGlobalStyle`
-  @keyframes geometry-float {
+  @keyframes node-pulse {
     0%, 100% {
-      transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-      transform: translateY(-20px) rotate(180deg);
-    }
-  }
-
-  @keyframes geometry-drift {
-    0%, 100% {
-      transform: translateX(0px) translateY(0px);
-    }
-    33% {
-      transform: translateX(30px) translateY(-15px);
-    }
-    66% {
-      transform: translateX(-20px) translateY(20px);
-    }
-  }
-
-  @keyframes geometry-pulse {
-    0%, 100% {
-      opacity: 0.08;
       transform: scale(1);
+      opacity: 0.6;
     }
     50% {
-      opacity: 0.15;
-      transform: scale(1.1);
+      transform: scale(1.2);
+      opacity: 0.9;
     }
   }
 
-  .geometry-shape {
+  @keyframes node-float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  @keyframes connection-flow {
+    0% {
+      stroke-dashoffset: 0;
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 0.6;
+    }
+    100% {
+      stroke-dashoffset: -20;
+      opacity: 0.3;
+    }
+  }
+
+  .network-node {
     position: absolute;
-    opacity: 0.08;
-    pointer-events: none;
-  }
-
-  .geometry-shape.circle {
     border-radius: 50%;
-    border: 1px solid;
     background: radial-gradient(circle, currentColor, transparent);
+    border: 2px solid currentColor;
+    pointer-events: none;
+    animation: node-pulse 3s ease-in-out infinite;
   }
 
-  .geometry-shape.triangle {
-    width: 0;
-    height: 0;
-    border-left: solid transparent;
-    border-right: solid transparent;
-    border-bottom: solid;
-    background: none;
-    border-top: none;
-  }
-
-  .geometry-shape.square {
-    border-radius: 4px;
-    border: 1px solid;
-    background: linear-gradient(135deg, currentColor, transparent);
-  }
-
-  .geometry-shape.hexagon {
-    border: 1px solid;
-    background: currentColor;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  }
-
-  .geometry-shape.animate-float {
-    animation: geometry-float 8s ease-in-out infinite;
-  }
-
-  .geometry-shape.animate-drift {
-    animation: geometry-drift 12s ease-in-out infinite;
-  }
-
-  .geometry-shape.animate-pulse {
-    animation: geometry-pulse 4s ease-in-out infinite;
+  .network-node.animate-float {
+    animation: node-pulse 3s ease-in-out infinite, node-float 6s ease-in-out infinite;
   }
 `;
 
-const StyledGeometry = styled.div`
+const StyledNetwork = styled.div`
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -95,11 +64,30 @@ const StyledGeometry = styled.div`
   @media (max-width: 768px) {
     display: none;
   }
+
+  svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .connection-line {
+    stroke: currentColor;
+    stroke-width: 1;
+    fill: none;
+    opacity: 0.2;
+    stroke-dasharray: 5, 5;
+    animation: connection-flow 4s linear infinite;
+  }
 `;
 
 const AnimatedGeometry = () => {
   const containerRef = useRef(null);
-  const shapesRef = useRef([]);
+  const svgRef = useRef(null);
+  const nodesRef = useRef([]);
+  const connectionsRef = useRef([]);
   const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
@@ -109,53 +97,132 @@ const AnimatedGeometry = () => {
 
     const container = containerRef.current;
     const colors = ['#7ce6d4', '#7bc3ff', '#a78bfa'];
-    const shapes = ['circle', 'triangle', 'square', 'hexagon'];
-    const animations = ['float', 'drift', 'pulse'];
+    
+    // Create SVG for connections
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('class', 'network-svg');
+    container.appendChild(svg);
+    svgRef.current = svg;
 
-    // Create geometric shapes positioned on sides
-    const createShape = (side, index) => {
-      const shape = document.createElement('div');
-      const shapeType = shapes[Math.floor(Math.random() * shapes.length)];
-      const color = colors[Math.floor(Math.random() * colors.length)];
-      const size = 40 + Math.random() * 60;
-      const top = 10 + (index * 15) + Math.random() * 5;
-      const animation = animations[Math.floor(Math.random() * animations.length)];
-      const duration = 6 + Math.random() * 6;
-      const delay = Math.random() * 3;
+    // Create symmetrical node grid
+    const createSymmetricalNodes = () => {
+      const nodes = [];
+      const gridCols = 8;
+      const gridRows = 6;
+      const paddingX = 8;
+      const paddingY = 10;
+      
+      // Calculate spacing
+      const widthPercent = 100 - (paddingX * 2);
+      const heightPercent = 100 - (paddingY * 2);
+      const colSpacing = widthPercent / (gridCols - 1);
+      const rowSpacing = heightPercent / (gridRows - 1);
 
-      shape.className = `geometry-shape ${shapeType} animate-${animation}`;
-      shape.style.color = color;
-      shape.style.width = shapeType === 'triangle' ? '0' : `${size}px`;
-      shape.style.height = shapeType === 'triangle' ? '0' : `${size}px`;
-      shape.style.left = side === 'left' ? `${5 + Math.random() * 3}%` : `${92 + Math.random() * 3}%`;
-      shape.style.top = `${top}%`;
-      shape.style.animationDuration = `${duration}s`;
-      shape.style.animationDelay = `${delay}s`;
+      // Create nodes in grid pattern
+      for (let row = 0; row < gridRows; row++) {
+        for (let col = 0; col < gridCols; col++) {
+          const x = paddingX + (col * colSpacing);
+          const y = paddingY + (row * rowSpacing);
+          const color = colors[Math.floor(Math.random() * colors.length)];
+          const size = 8 + Math.random() * 6;
+          const delay = Math.random() * 2;
+          const shouldFloat = Math.random() > 0.5;
 
-      if (shapeType === 'triangle') {
-        shape.style.borderLeftWidth = `${size}px`;
-        shape.style.borderRightWidth = `${size}px`;
-        shape.style.borderBottomWidth = `${size * 1.73}px`;
+          const node = document.createElement('div');
+          node.className = `network-node ${shouldFloat ? 'animate-float' : ''}`;
+          node.style.width = `${size}px`;
+          node.style.height = `${size}px`;
+          node.style.left = `${x}%`;
+          node.style.top = `${y}%`;
+          node.style.color = color;
+          node.style.animationDelay = `${delay}s`;
+          node.setAttribute('data-x', x);
+          node.setAttribute('data-y', y);
+          node.setAttribute('data-color', color);
+
+          container.appendChild(node);
+          nodes.push({
+            element: node,
+            x,
+            y,
+            color,
+            size,
+          });
+        }
       }
 
-      return shape;
+      return nodes;
     };
 
-    // Create left side shapes
-    for (let i = 0; i < 8; i++) {
-      const shape = createShape('left', i);
-      container.appendChild(shape);
-      shapesRef.current.push(shape);
-    }
+    // Create connections between nearby nodes
+    const createConnections = (nodes) => {
+      const connections = [];
+      const maxDistance = 15; // percentage
 
-    // Create right side shapes
-    for (let i = 0; i < 8; i++) {
-      const shape = createShape('right', i);
-      container.appendChild(shape);
-      shapesRef.current.push(shape);
-    }
+      nodes.forEach((node, i) => {
+        // Find nearby nodes
+        const nearbyNodes = nodes.filter((otherNode, j) => {
+          if (i === j) return false;
+          const dx = Math.abs(node.x - otherNode.x);
+          const dy = Math.abs(node.y - otherNode.y);
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          return distance < maxDistance;
+        });
 
-    // Update shapes on scroll
+        // Connect to 2-3 nearest nodes
+        nearbyNodes
+          .sort((a, b) => {
+            const distA = Math.sqrt(
+              Math.pow(node.x - a.x, 2) + Math.pow(node.y - a.y, 2)
+            );
+            const distB = Math.sqrt(
+              Math.pow(node.x - b.x, 2) + Math.pow(node.y - b.y, 2)
+            );
+            return distA - distB;
+          })
+          .slice(0, Math.floor(2 + Math.random() * 2))
+          .forEach(targetNode => {
+            // Check if connection already exists
+            const exists = connections.some(
+              conn =>
+                (conn.from === node && conn.to === targetNode) ||
+                (conn.from === targetNode && conn.to === node)
+            );
+
+            if (!exists) {
+              const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+              const color = node.color;
+              const opacity = 0.15 + Math.random() * 0.1;
+
+              line.setAttribute('class', 'connection-line');
+              line.setAttribute('x1', `${node.x}%`);
+              line.setAttribute('y1', `${node.y}%`);
+              line.setAttribute('x2', `${targetNode.x}%`);
+              line.setAttribute('y2', `${targetNode.y}%`);
+              line.setAttribute('stroke', color);
+              line.setAttribute('opacity', opacity);
+              line.style.animationDelay = `${Math.random() * 2}s`;
+
+              svg.appendChild(line);
+              connections.push({
+                from: node,
+                to: targetNode,
+                element: line,
+              });
+            }
+          });
+      });
+
+      return connections;
+    };
+
+    // Initialize network
+    const nodes = createSymmetricalNodes();
+    nodesRef.current = nodes;
+    const connections = createConnections(nodes);
+    connectionsRef.current = connections;
+
+    // Update network on scroll
     let ticking = false;
     const handleScroll = () => {
       if (!ticking) {
@@ -165,11 +232,20 @@ const AnimatedGeometry = () => {
           const maxScroll = document.documentElement.scrollHeight - windowHeight;
           const scrollProgress = maxScroll > 0 ? scrollY / maxScroll : 0;
 
-          shapesRef.current.forEach((shape, index) => {
-            if (shape) {
-              const scrollOffset = scrollProgress * 100 * (index % 2 === 0 ? 1 : -1);
-              const baseTop = parseFloat(shape.style.top);
-              shape.style.transform = `translateY(${scrollOffset}px)`;
+          // Animate nodes based on scroll
+          nodes.forEach((node, index) => {
+            if (node.element) {
+              const scrollOffset = Math.sin(scrollProgress * Math.PI * 2 + index) * 10;
+              const baseTop = parseFloat(node.element.style.top);
+              node.element.style.transform = `translateY(${scrollOffset}px)`;
+            }
+          });
+
+          // Update connection opacity based on scroll
+          connections.forEach((conn, index) => {
+            if (conn.element) {
+              const pulse = Math.sin(scrollProgress * Math.PI * 4 + index) * 0.1 + 0.2;
+              conn.element.setAttribute('opacity', pulse);
             }
           });
 
@@ -183,19 +259,28 @@ const AnimatedGeometry = () => {
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      shapesRef.current.forEach(shape => {
-        if (shape && shape.parentNode) {
-          shape.parentNode.removeChild(shape);
+      nodes.forEach(node => {
+        if (node.element && node.element.parentNode) {
+          node.element.parentNode.removeChild(node.element);
         }
       });
-      shapesRef.current = [];
+      connections.forEach(conn => {
+        if (conn.element && conn.element.parentNode) {
+          conn.element.parentNode.removeChild(conn.element);
+        }
+      });
+      if (svg && svg.parentNode) {
+        svg.parentNode.removeChild(svg);
+      }
+      nodesRef.current = [];
+      connectionsRef.current = [];
     };
   }, [prefersReducedMotion]);
 
   return (
     <>
       <GeometryStyles />
-      <StyledGeometry ref={containerRef} />
+      <StyledNetwork ref={containerRef} />
     </>
   );
 };
