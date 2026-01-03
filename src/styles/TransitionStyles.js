@@ -3,17 +3,17 @@ import { css } from 'styled-components';
 // https://reactcommunity.org/react-transition-group/css-transition
 
 const TransitionStyles = css`
-  /* Fade up with scale */
+  /* Fade up with scale - faster */
   .fadeup-enter {
     opacity: 0.01;
-    transform: translateY(30px) scale(0.95);
-    transition: opacity 400ms var(--easing), transform 400ms var(--easing);
+    transform: translateY(20px) scale(0.97);
+    transition: opacity 300ms var(--easing), transform 300ms var(--easing);
   }
 
   .fadeup-enter-active {
     opacity: 1;
     transform: translateY(0px) scale(1);
-    transition: opacity 400ms var(--easing), transform 400ms var(--easing);
+    transition: opacity 300ms var(--easing), transform 300ms var(--easing);
   }
 
   /* Fade down */

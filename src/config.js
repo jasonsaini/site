@@ -37,14 +37,14 @@ module.exports = {
     darkNavy: '#020c1b',
   },
 
-  srConfig: (delay = 200, viewFactor = 0.25) => ({
+  srConfig: (delay = 100, viewFactor = 0.15) => ({
     origin: 'bottom',
-    distance: '40px',
-    duration: 800,
+    distance: '30px',
+    duration: 500,
     delay,
     rotate: { x: 0, y: 0, z: 0 },
     opacity: 0,
-    scale: 0.95,
+    scale: 0.97,
     easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
     mobile: true,
     reset: false,
