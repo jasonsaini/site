@@ -52,6 +52,16 @@ const StyledHeroSection = styled.section`
     backdrop-filter: blur(12px);
     overflow: hidden;
     position: relative;
+    animation: float 6s ease-in-out infinite;
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
 
     &:before {
       content: '';
@@ -61,6 +71,18 @@ const StyledHeroSection = styled.section`
         radial-gradient(circle at 90% 20%, rgba(123, 195, 255, 0.16), transparent 25%),
         linear-gradient(120deg, rgba(255, 255, 255, 0.03), transparent 40%);
       z-index: -1;
+      animation: gradientShift 8s ease-in-out infinite;
+    }
+
+    @keyframes gradientShift {
+      0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+      }
     }
   }
 
@@ -125,6 +147,22 @@ const StyledHeroSection = styled.section`
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 28px;
+
+    .pill {
+      padding: 6px 14px;
+      background: rgba(124, 230, 212, 0.1);
+      border: 1px solid rgba(124, 230, 212, 0.2);
+      border-radius: 20px;
+      color: var(--green);
+      font-family: var(--font-mono);
+      font-size: var(--fz-xs);
+      transition: var(--transition);
+
+      &:hover {
+        background: rgba(124, 230, 212, 0.15);
+        transform: translateY(-2px);
+      }
+    }
   }
 `;
 

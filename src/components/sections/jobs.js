@@ -17,6 +17,12 @@ const StyledJobsSection = styled.section`
   backdrop-filter: blur(10px);
   position: relative;
   overflow: hidden;
+  transition: var(--transition);
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 30px 90px -30px rgba(0, 0, 0, 0.75);
+  }
 
   &:before {
     content: '';
@@ -25,6 +31,16 @@ const StyledJobsSection = styled.section`
     background: radial-gradient(circle at 10% 10%, rgba(124, 230, 212, 0.18), transparent 32%),
       radial-gradient(circle at 80% 0%, rgba(123, 195, 255, 0.12), transparent 30%);
     z-index: -1;
+    animation: gradientPulse 10s ease-in-out infinite;
+  }
+
+  @keyframes gradientPulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
   }
 
   .inner {
@@ -175,9 +191,18 @@ const StyledTabPanel = styled.div`
 
   .range {
     margin-bottom: 25px;
-    color: var(--light-slate);
+    color: var(--lightest-slate);
     font-family: var(--font-mono);
     font-size: var(--fz-xs);
+  }
+
+  p {
+    color: var(--lightest-slate);
+    line-height: 1.7;
+  }
+
+  ul li {
+    color: var(--lightest-slate);
   }
 `;
 

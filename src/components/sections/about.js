@@ -15,6 +15,12 @@ const StyledAboutSection = styled.section`
   padding: 48px;
   position: relative;
   overflow: hidden;
+  transition: var(--transition);
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 30px 90px -30px rgba(0, 0, 0, 0.75);
+  }
 
   &:before {
     content: '';
@@ -23,6 +29,16 @@ const StyledAboutSection = styled.section`
     background: radial-gradient(circle at 12% 18%, rgba(124, 230, 212, 0.15), transparent 32%),
       radial-gradient(circle at 88% 8%, rgba(123, 195, 255, 0.12), transparent 30%);
     z-index: -1;
+    animation: gradientPulse 10s ease-in-out infinite;
+  }
+
+  @keyframes gradientPulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
   }
 
   .inner {
@@ -37,7 +53,18 @@ const StyledAboutSection = styled.section`
 `;
 const StyledText = styled.div`
   p {
-    color: var(--light-slate);
+    color: var(--lightest-slate);
+    line-height: 1.7;
+    margin-bottom: 18px;
+
+    a {
+      color: var(--green);
+      transition: var(--transition);
+
+      &:hover {
+        color: var(--blue);
+      }
+    }
   }
 
   ul.skills-list {
@@ -147,14 +174,14 @@ const About = () => {
   }, []);
 
   const skills = [
-    'AWS & GCP',
-    'Terraform',
-    'TypeScript / React',
     'Python',
-    'Go',
-    'Rust',
-    'PostgreSQL',
-    'Airflow & Kafka',
+    'Java',
+    'JavaScript',
+    'AWS',
+    'Terraform',
+    'Serverless',
+    'Kafka',
+    'SQL',
   ];
 
   return (
@@ -165,23 +192,24 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hi! I’m Jason, a software engineer who loves shipping thoughtful, resilient products.
-              I care deeply about pairing clean architecture with a polished experience so teams can
-              move fast without sacrificing quality.
+              Hi! I'm Jason, a software engineer specializing in cloud platforms, backend systems, and
+              data products. I'm currently a Software Engineer at Southwest Airlines, building
+              serverless microservices and automation systems.
             </p>
 
             <p>
-              Fast-forward to today, I’ve partnered with{' '}
-              <a href="https://aws.amazon.com/">Amazon</a>,{' '}
+              I've had the privilege of working at{' '}
+              <a href="https://aws.amazon.com/">Amazon Web Services</a>,{' '}
               <a href="https://www.morganstanley.com/">Morgan Stanley</a>,{' '}
               <a href="https://www.sw.siemens.com/en-US/">Siemens</a>, and{' '}
-              <a href="https://www.southwest.com/">Southwest Airlines</a> to deliver scalable cloud
-              systems, secure data pipelines, and user-friendly applications.
+              <a href="https://www.optum.com/">Optum</a>, where I've delivered scalable cloud
+              infrastructure, automated deployment pipelines, and data-driven solutions.
             </p>
 
             <p>
-              I’m happiest when I’m collaborating across product and engineering, finding signal in
-              data, and mentoring teammates to ship with confidence.
+              I'm passionate about building resilient systems, automating workflows, and mentoring
+              teammates. I hold AWS Cloud Practitioner, Solutions Architect Associate, and Developer
+              Associate certifications.
             </p>
 
             <p>Here are a few tools and platforms I’ve leaned on lately:</p>

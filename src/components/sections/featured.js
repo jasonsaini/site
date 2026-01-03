@@ -28,6 +28,13 @@ const StyledProject = styled.li`
   border: 1px solid var(--card-border);
   box-shadow: var(--panel-shadow);
   backdrop-filter: blur(10px);
+  transition: var(--transition);
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 90px -30px rgba(0, 0, 0, 0.75);
+    border-color: rgba(124, 230, 212, 0.3);
+  }
 
   @media (max-width: 768px) {
     ${({ theme }) => theme.mixins.boxShadow};
@@ -164,14 +171,16 @@ const StyledProject = styled.li`
     z-index: 2;
     padding: 25px;
     border-radius: var(--border-radius);
-    background: rgba(255, 255, 255, 0.03);
-    color: var(--light-slate);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--lightest-slate);
     font-size: var(--fz-lg);
+    line-height: 1.6;
 
     @media (max-width: 768px) {
       padding: 20px 0;
       background-color: transparent;
       box-shadow: none;
+      color: var(--lightest-slate);
 
       &:hover {
         box-shadow: none;
@@ -180,11 +189,17 @@ const StyledProject = styled.li`
 
     a {
       ${({ theme }) => theme.mixins.inlineLink};
+      color: var(--green);
     }
 
     strong {
       color: var(--white);
-      font-weight: normal;
+      font-weight: 600;
+    }
+
+    p {
+      color: var(--lightest-slate);
+      margin-bottom: 12px;
     }
   }
 
