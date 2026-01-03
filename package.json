@@ -43,7 +43,7 @@
     "gatsby-plugin-sitemap": "^4.0.0",
     "gatsby-plugin-styled-components": "^4.4.0",
     "gatsby-remark-external-links": "0.0.4",
-    "gatsby-remark-images": "^5.1.0",
+    "gatsby-remark-images": "5.1.0",
     "gatsby-remark-prismjs": "^5.1.0",
     "gatsby-source-filesystem": "^3.4.0",
     "gatsby-transformer-remark": "^4.1.0",
@@ -57,6 +57,9 @@
     "react-transition-group": "^4.3.0",
     "scrollreveal": "^4.0.5",
     "styled-components": "^5.3.0"
+  },
+  "overrides": {
+    "cheerio": "1.0.0-rc.12"
   },
   "devDependencies": {
     "@babel/core": "^7.14.0",
