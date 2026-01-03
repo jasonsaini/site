@@ -74,11 +74,25 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    background-color: var(--navy);
+    background: var(--gradient-01);
     color: var(--slate);
     font-family: var(--font-sans);
     font-size: var(--fz-xl);
     line-height: 1.3;
+    color-scheme: dark;
+
+    &:after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(circle at 25% 20%, rgba(255, 255, 255, 0.035), transparent 35%),
+        radial-gradient(circle at 70% 15%, rgba(255, 255, 255, 0.03), transparent 30%),
+        linear-gradient(120deg, rgba(255, 255, 255, 0.02), transparent 35%),
+        linear-gradient(300deg, rgba(255, 255, 255, 0.02), transparent 45%);
+      opacity: 0.8;
+      z-index: -1;
+    }
 
     @media (max-width: 480px) {
       font-size: var(--fz-lg);
@@ -167,6 +181,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 600;
     color: var(--lightest-slate);
     line-height: 1.1;
+    letter-spacing: -0.01em;
   }
 
   .big-heading {
@@ -387,6 +402,42 @@ const GlobalStyle = createGlobalStyle`
 
   #logo {
     color: var(--green);
+  }
+
+  .glass-panel {
+    position: relative;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 22px;
+    padding: 40px;
+    box-shadow: var(--panel-shadow);
+    backdrop-filter: blur(12px);
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      background: linear-gradient(120deg, rgba(124, 230, 212, 0.08), rgba(123, 195, 255, 0.05)),
+        radial-gradient(circle at 10% 10%, rgba(124, 230, 212, 0.18), transparent 32%),
+        radial-gradient(circle at 90% 20%, rgba(167, 139, 250, 0.14), transparent 28%);
+      z-index: -1;
+      opacity: 0.9;
+    }
+  }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--card-border);
+    color: var(--lightest-slate);
+    font-family: var(--font-mono);
+    font-size: var(--fz-xs);
+    letter-spacing: 0.02em;
   }
 
   .overline {

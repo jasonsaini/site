@@ -9,6 +9,23 @@ import { usePrefersReducedMotion } from '@hooks';
 
 const StyledJobsSection = styled.section`
   max-width: 700px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 22px;
+  box-shadow: var(--panel-shadow);
+  padding: 40px;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    inset: -6%;
+    background: radial-gradient(circle at 10% 10%, rgba(124, 230, 212, 0.18), transparent 32%),
+      radial-gradient(circle at 80% 0%, rgba(123, 195, 255, 0.12), transparent 30%);
+    z-index: -1;
+  }
 
   .inner {
     display: flex;
@@ -73,8 +90,8 @@ const StyledTabButton = styled.button`
   width: 100%;
   height: var(--tab-height);
   padding: 0 20px 2px;
-  border-left: 2px solid var(--lightest-navy);
-  background-color: transparent;
+  border-left: 2px solid var(--card-border);
+  background-color: rgba(255, 255, 255, 0.02);
   color: ${({ isActive }) => (isActive ? 'var(--green)' : 'var(--slate)')};
   font-family: var(--font-mono);
   font-size: var(--fz-xs);
@@ -188,7 +205,6 @@ const Jobs = () => {
   `);
 
   const jobsData = data.jobs.edges;
-  console.log("sorted = " , data.jobs.edges)
   const [activeTabId, setActiveTabId] = useState(0);
   const [tabFocus, setTabFocus] = useState(null);
   const tabs = useRef([]);

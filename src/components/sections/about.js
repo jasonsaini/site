@@ -7,6 +7,23 @@ import { usePrefersReducedMotion } from '@hooks';
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 22px;
+  box-shadow: var(--panel-shadow);
+  backdrop-filter: blur(10px);
+  padding: 48px;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    inset: -8%;
+    background: radial-gradient(circle at 12% 18%, rgba(124, 230, 212, 0.15), transparent 32%),
+      radial-gradient(circle at 88% 8%, rgba(123, 195, 255, 0.12), transparent 30%);
+    z-index: -1;
+  }
 
   .inner {
     display: grid;
@@ -19,6 +36,10 @@ const StyledAboutSection = styled.section`
   }
 `;
 const StyledText = styled.div`
+  p {
+    color: var(--light-slate);
+  }
+
   ul.skills-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(140px, 200px));
@@ -61,7 +82,7 @@ const StyledPic = styled.div`
     position: relative;
     width: 100%;
     border-radius: var(--border-radius);
-    background-color: var(--green);
+    background: linear-gradient(140deg, rgba(124, 230, 212, 0.25), rgba(123, 195, 255, 0.18));
 
     &:hover,
     &:focus {
@@ -105,7 +126,7 @@ const StyledPic = styled.div`
     }
 
     &:after {
-      border: 2px solid var(--green);
+      border: 2px solid var(--blue);
       top: 14px;
       left: 14px;
       z-index: -1;
@@ -125,7 +146,16 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['Python', 'Java', 'React', 'Go', 'Rust', 'SQL'];
+  const skills = [
+    'AWS & GCP',
+    'Terraform',
+    'TypeScript / React',
+    'Python',
+    'Go',
+    'Rust',
+    'PostgreSQL',
+    'Airflow & Kafka',
+  ];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -135,23 +165,26 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hi! My name is Jason and I enjoy making tech work for myself and others. My interest
-              in software dates all the way back to 2015, where I made a Rubik's cube solving robot
-              when I was 13.
+              Hi! I’m Jason, a software engineer who loves shipping thoughtful, resilient products.
+              I care deeply about pairing clean architecture with a polished experience so teams can
+              move fast without sacrificing quality.
             </p>
 
             <p>
-              Fast-forward to today, and I’ve had the privilege of working at{' '}
-              <a href="https://aws.amazon.com/"> THE leading cloud solutions provider</a>,{' '}
-              <a href="https://www.optum.com/"> a health services innovation company</a>,{' '}
-              <a href="https://www.southwest.com/">my favorite airline</a>,{' '}
-              <a href="https://www.morganstanley.com/">a leading global investment bank</a>, and{' '}
-              <a href="https://www.sw.siemens.com/en-US/">a global technology powerhouse</a>!
+              Fast-forward to today, I’ve partnered with{' '}
+              <a href="https://aws.amazon.com/">Amazon</a>,{' '}
+              <a href="https://www.morganstanley.com/">Morgan Stanley</a>,{' '}
+              <a href="https://www.sw.siemens.com/en-US/">Siemens</a>, and{' '}
+              <a href="https://www.southwest.com/">Southwest Airlines</a> to deliver scalable cloud
+              systems, secure data pipelines, and user-friendly applications.
             </p>
 
-            <p></p>
+            <p>
+              I’m happiest when I’m collaborating across product and engineering, finding signal in
+              data, and mentoring teammates to ship with confidence.
+            </p>
 
-            <p>Here are a few technologies I’ve been working with recently:</p>
+            <p>Here are a few tools and platforms I’ve leaned on lately:</p>
           </div>
 
           <ul className="skills-list">

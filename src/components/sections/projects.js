@@ -11,6 +11,21 @@ const StyledProjectsSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 22px;
+  padding: 40px;
+  box-shadow: var(--panel-shadow);
+  backdrop-filter: blur(10px);
+
+  .section-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
 
   h2 {
     font-size: clamp(24px, 5vw, var(--fz-heading));
@@ -27,13 +42,13 @@ const StyledProjectsSection = styled.section`
   .projects-grid {
     ${({ theme }) => theme.mixins.resetList};
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 18px;
     position: relative;
     margin-top: 50px;
 
     @media (max-width: 1080px) {
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     }
   }
 
@@ -47,6 +62,7 @@ const StyledProject = styled.li`
   position: relative;
   cursor: default;
   transition: var(--transition);
+  border-radius: 18px;
 
   @media (prefers-reduced-motion: no-preference) {
     &:hover,
@@ -70,8 +86,9 @@ const StyledProject = styled.li`
     position: relative;
     height: 100%;
     padding: 2rem 1.75rem;
-    border-radius: var(--border-radius);
-    background-color: var(--light-navy);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--card-border);
     transition: var(--transition);
     overflow: auto;
   }
@@ -264,14 +281,14 @@ const Projects = () => {
   };
 
   return (
-    <></>);
-    /*
     <StyledProjectsSection>
-      <h2 ref={revealTitle}>Other Noteworthy Projects</h2>
-  
-       <Link className="inline-link archive-link" to="/archive" ref={revealArchiveLink}>
-        view the archive
-      </Link>
+      <div className="section-header">
+        <h2 ref={revealTitle}>Other Noteworthy Projects</h2>
+        <Link className="inline-link archive-link" to="/archive" ref={revealArchiveLink}>
+          View the archive
+        </Link>
+      </div>
+
       <ul className="projects-grid">
         {prefersReducedMotion ? (
           <>
@@ -303,11 +320,13 @@ const Projects = () => {
         )}
       </ul>
 
-    //   <button className="more-button" onClick={() => setShowMore(!showMore)}>
-    //     Show {showMore ? 'Less' : 'More'}
-    //   </button>
-    // </StyledProjectsSection>
-    */
+      {projects.length > GRID_LIMIT && (
+        <button className="more-button" onClick={() => setShowMore(!showMore)}>
+          Show {showMore ? 'Less' : 'More'}
+        </button>
+      )}
+    </StyledProjectsSection>
+  );
 };
 
 export default Projects;

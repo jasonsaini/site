@@ -22,9 +22,16 @@ const StyledProject = styled.li`
   grid-gap: 10px;
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
+  padding: 24px;
+  border-radius: 22px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--panel-shadow);
+  backdrop-filter: blur(10px);
 
   @media (max-width: 768px) {
     ${({ theme }) => theme.mixins.boxShadow};
+    padding: 0;
   }
 
   &:not(:last-of-type) {
@@ -157,7 +164,7 @@ const StyledProject = styled.li`
     z-index: 2;
     padding: 25px;
     border-radius: var(--border-radius);
-    background-color: var(--light-navy);
+    background: rgba(255, 255, 255, 0.03);
     color: var(--light-slate);
     font-size: var(--fz-lg);
 
