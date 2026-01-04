@@ -17,7 +17,7 @@ const StyledCredit = styled.div`
   line-height: 1;
 
   a {
-    padding: 10px 8px;
+    padding: 10px;
   }
 
   .github-stats {
@@ -39,9 +39,10 @@ const StyledCredit = styled.div`
 
 const Footer = () => (
   <StyledFooter>
-    <StyledCredit tabIndex="-1">
-      <div>Designed &amp; built by Jason Saini</div>
-      <a href="https://github.com/bchiang7/v4">Inspired by Brittany Chiang</a>
+    <StyledCredit tabindex="-1">
+      <a href="https://github.com/bchiang7/v4">
+        <div>Designed by Brittany Chiang</div>
+      </a>
     </StyledCredit>
   </StyledFooter>
 );

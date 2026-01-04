@@ -7,39 +7,6 @@ import { usePrefersReducedMotion } from '@hooks';
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 22px;
-  box-shadow: var(--panel-shadow);
-  backdrop-filter: blur(10px);
-  padding: 48px;
-  position: relative;
-  overflow: hidden;
-  transition: var(--transition);
-
-  &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 30px 90px -30px rgba(0, 0, 0, 0.75);
-  }
-
-  &:before {
-    content: '';
-    position: absolute;
-    inset: -8%;
-    background: radial-gradient(circle at 12% 18%, rgba(124, 230, 212, 0.15), transparent 32%),
-      radial-gradient(circle at 88% 8%, rgba(123, 195, 255, 0.12), transparent 30%);
-    z-index: -1;
-    animation: gradientPulse 10s ease-in-out infinite;
-  }
-
-  @keyframes gradientPulse {
-    0%, 100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.7;
-    }
-  }
 
   .inner {
     display: grid;
@@ -52,21 +19,6 @@ const StyledAboutSection = styled.section`
   }
 `;
 const StyledText = styled.div`
-  p {
-    color: var(--lightest-slate);
-    line-height: 1.7;
-    margin-bottom: 18px;
-
-    a {
-      color: var(--green);
-      transition: var(--transition);
-
-      &:hover {
-        color: var(--blue);
-      }
-    }
-  }
-
   ul.skills-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(140px, 200px));
@@ -109,7 +61,7 @@ const StyledPic = styled.div`
     position: relative;
     width: 100%;
     border-radius: var(--border-radius);
-    background: linear-gradient(140deg, rgba(124, 230, 212, 0.25), rgba(123, 195, 255, 0.18));
+    background-color: var(--green);
 
     &:hover,
     &:focus {
@@ -153,7 +105,7 @@ const StyledPic = styled.div`
     }
 
     &:after {
-      border: 2px solid var(--blue);
+      border: 2px solid var(--green);
       top: 14px;
       left: 14px;
       z-index: -1;
@@ -173,16 +125,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = [
-    'Python',
-    'Java',
-    'JavaScript',
-    'AWS',
-    'Terraform',
-    'Serverless',
-    'Kafka',
-    'SQL',
-  ];
+  const skills = ['Python', 'Java', 'React', 'Go', 'Rust', 'SQL'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -192,27 +135,23 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hi! I'm Jason, a software engineer specializing in cloud platforms, backend systems, and
-              data products. I'm currently a Software Engineer at Southwest Airlines, building
-              serverless microservices and automation systems.
+              Hi! My name is Jason and I enjoy making tech work for myself and others. My interest
+              in software dates all the way back to 2015, where I made a Rubik's cube solving robot
+              when I was 13.
             </p>
 
             <p>
-              I've had the privilege of working at{' '}
-              <a href="https://aws.amazon.com/">Amazon Web Services</a>,{' '}
-              <a href="https://www.morganstanley.com/">Morgan Stanley</a>,{' '}
-              <a href="https://www.sw.siemens.com/en-US/">Siemens</a>, and{' '}
-              <a href="https://www.optum.com/">Optum</a>, where I've delivered scalable cloud
-              infrastructure, automated deployment pipelines, and data-driven solutions.
+              Fast-forward to today, and I’ve had the privilege of working at{' '}
+              <a href="https://aws.amazon.com/"> THE leading cloud solutions provider</a>,{' '}
+              <a href="https://www.optum.com/"> a health services innovation company</a>,{' '}
+              <a href="https://www.southwest.com/">my favorite airline</a>,{' '}
+              <a href="https://www.morganstanley.com/">a leading global investment bank</a>, and{' '}
+              <a href="https://www.sw.siemens.com/en-US/">a global technology powerhouse</a>!
             </p>
 
-            <p>
-              I'm passionate about building resilient systems, automating workflows, and mentoring
-              teammates. I hold AWS Cloud Practitioner, Solutions Architect Associate, and Developer
-              Associate certifications.
-            </p>
+            <p></p>
 
-            <p>Here are a few tools and platforms I’ve leaned on lately:</p>
+            <p>Here are a few technologies I’ve been working with recently:</p>
           </div>
 
           <ul className="skills-list">
