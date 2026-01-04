@@ -283,10 +283,10 @@ const Projects = () => {
   return (
     <StyledProjectsSection>
       <div className="section-header">
-        <h2 ref={revealTitle}>Other Noteworthy Projects</h2>
-        <Link className="inline-link archive-link" to="/archive" ref={revealArchiveLink}>
+      <h2 ref={revealTitle}>Other Noteworthy Projects</h2>
+       <Link className="inline-link archive-link" to="/archive" ref={revealArchiveLink}>
           View the archive
-        </Link>
+      </Link>
       </div>
 
       <ul className="projects-grid">
